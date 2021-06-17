@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 500px;
+            margin: 10px auto;
+        }
+        #middle{overflow: hidden}
+        #left{float: left; width: 150px; background-color: red;}
+        #right{float: right; width: 350px; background-color: blue;}
+        #top{background-color: green;}
+        #bottom{background-color: purple;}
+#container{
+    /*색상 및 크기 적용*/
+    width: 500px; height: 250px;
+    background: orange;
+    /*위치 설정*/
+    position: absolute;
+    left: 50%; top:50%;
+    margin-left: -250px;
+    margin-top: -125px;
+
+
+}
+
+    </style>
+</head>
+<body>
+    <div id="top">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, laboriosam. Architecto ullam minus incidunt sunt modi veritatis, et, beatae enim sapiente totam nesciunt unde nihil neque, dicta quasi numquam qui!</div>
+    <div id="middle">
+        <div id="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cupiditate odit obcaecati. Culpa tempora sed tenetur inventore possimus qui perferendis nisi magni debitis amet aspernatur quaerat ipsa, voluptatum rerum delectus.</div>
+        <div id="right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, enim consectetur reprehenderit rerum alias doloremque fuga! Voluptatibus libero id, error fuga iusto repellendus vel illum officia ipsa autem doloremque quis?</div> 
+    </div>
+    <div id="bottom">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, ab? Vel corporis totam eligendi aliquam nam necessitatibus officiis ratione rem dolorem blanditiis sed libero suscipit ea dignissimos, fugiat natus adipisci.</div>
+    <div id="container">
+        <h1>요소의 중앙배치</h1>
+    </div>
+</body>
+</html>
