@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>20202692 문현준</title>
+    <style>
+        .select{color:  midnightblue;}
+        
+      
+        .gap{
+            text-shadow: 1px 1px blue;
+            color: blue;
+        }
+        #Left2{
+            position: absolute;
+            left: 50%; top: 50%;
+            margin-left: -10px;
+            margin-top: -40px;
+        }
+        #Left{
+            position: absolute;
+            left: 50%; top: 50%;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .music{
+            position: absolute;
+            left: 50%; top: 50%;
+            margin-left: -10px;
+            margin-top: -170px;
+        }
+        .music2{
+            position: absolute;
+            left: 50%; top: 50%;
+            margin-left: 0px;
+            margin-top: -140px;
+        }
+        input[id="menuicon"]{
+            display:none;
+        }
+           input[id="menuicon"]+label{
+            display:block;
+            width:60px;
+            height:40px;
+            position:relative;
+            cursor:pointer;
+        }
+        input[id="menuicon"]+label span{
+            display:block;
+            position:absolute;
+            width:100%;
+            height:5px;
+            border-radius:30px;
+            background:#000;
+            transition: all.35s;
+        }
+        input[id="menuicon"]+label span:nth-child(1){
+            top:0%;
+            
+        }
+        input[id="menuicon"]+label span:nth-child(2){
+            top:50%;
+            transform:translateY(-50%)
+        }
+        input[id="menuicon"]+label span:nth-child(3){
+            bottom:0%;
+            
+        }
+        input[id="menuicon"]:checked+label span:nth-child(1){
+            top:50%;
+            transform:translateY(-50%) rotate(45deg);
+        }
+        input[id="menuicon"]:checked+label span:nth-child(2){
+            opacity:0;
+        }
+        input[id="menuicon"]:checked+label span:nth-child(3){
+            bottom:50%;
+            transform:translateY(50%) rotate(-45deg);
+        }
+
+
+       
+
+        
+    </style>
+    <script>
+        function load(){
+            let select = document.getElementById("bucketlist");
+            window.location = select.options[select.selectedIndex].value;
+        }
+
+    let hyeonjun =["노래듣기","걸어다니기","운동하기","친구와 노래방가기"];
+        window.onload = function () {
+    var heads =document.getElementsByClassName("select4");
+
+              for(var j in heads){
+            var header = heads[j];
+            header.innerHTML =hyeonjun[j];
+                
+        }       
+     };
+    </script>
+   
+</head>
+
+<body>
+    
+    <ul>
+        <hr>
+        <header><h1 style ="text-align:center;">자기소개 하기</h1></header>
+        <hr>
+        <div><img src="images\Cursive.jpg" alt="필기체"width="300"></div>
+        <input type="checkbox"id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <li class="select"><strong>이름:</strong> 문현준</li>
+        <li class="select"><strong>학번:</strong> 20202692</li>
+        <li class="select"><strong>학과:</strong> 컴퓨터소프트웨어공학과</li>
+        <br>
+        <h3><strong   onmouseover="this.style.color='orangered'"
+            onmouseout="this.style.color='black'">취미</strong></h3>
+        <li class="select4">축구하기</li>
+        <p class="music"><b>좋아하는 노래</b></p>
+        <audio class="music2" src="audios\Rollin.mp3" controls="controls"></audio>
+        <li class="select4">시험공부하기</li>
+        <li class="select4">프로그래밍오류찾기</li>
+        <li class="select4">알바하기</li>
+        <br>
+       <h3><strong class="select3" onmouseover="this.style.color='goldenrod'"
+        onmouseout="this.style.color='black'">대학교와서 하고싶은 것</strong></h3> 
+        <label >대학교와서 하고싶은 것:</label>
+        <select id ="bucketlist">
+            <optgroup Label ="하고 싶은 것">
+        <option value ="https://youtu.be/LQ182IQZfW8" selected>java 잘해지기</option>
+        <option value ="https://youtu.be/hLhHFiwhRfA">javascript 공부 열심히 하기</option>
+        <option value="https://youtu.be/ffENjt7aEdc">html 잘해지기</option>
+        <option value="https://github.com/pungji?tab=repositories">git 응용하여 사용하기</option>
+        <option value ="https://www.acmicpc.net/">코딩 테스트 공부하여 풀어보기</option>
+        </optgroup>
+        </select>
+        <button onclick="load()">웹사이트 접속</button>
+     
+ 
+    
+        
+    </ul>
+    <p></p>
+    <strong id= "Left2">문현준 학생 시간표</strong>
+    <table border="1" id="Left">
+        <tr>
+            <th>XXX</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        
+        </tr>
+        <tr>
+            <Td>1교시</Td>
+            <td>웹프로그래밍</td>
+            <td>데이터구조</td>
+            <td class="gap">공강</td>
+            <td class="gap">공강</td>
+            <td class="gap">공강</td>         
+        </tr>
+        <tr>
+            <td>2교시</td>
+            <td>웹프로그래밍</td>
+            <td class="gap">공강</td>
+            <td>It융합기술이해</td>
+            <td class="gap">공강</td>
+            <td class="gap">공강</td>         
+        </tr>
+        <tr>
+            <td>3교시</td>
+            <td class="gap">공강</td>
+            <td>It융합기술이해</td>
+            <td>java프로그래밍</td>
+            <td class="gap">공강</td>
+            <td class="gap">공강</td>
+        </tr>
+        <tr>
+            <td>4교시</td>
+            <td class="gap">공강</td>
+            <td>It융합기술이해</td>
+            <td>웹프로그래밍</td>
+            <td class="gap">공강</td>
+            <td class="gap">공강</td>
+        </tr>
+        <Tr>
+            <td>5교시</td>
+            <td>이산수학</td>
+            <td class="gap">공강</td>
+            <td class="gap">공강</td>
+            <td>창의개발프로그래밍</td>
+            <td class="gap">공강</td>
+        </Tr>
+        <Tr>
+            <td>6교시</td>
+            <td>이산수학</td>
+            <td>이산수학</td>
+            <td class="gap">공강</td>
+            <td>창의개발프로그래밍</td>
+            <td class="gap">공강</td>
+        </Tr>
+        <Tr>
+            <td>7교시</td>
+            <td>앱인벤터모프</td>
+            <td>java프로그래밍</td>
+            <td>RIDI</td>
+            <td>데이터구조</td>
+            <td class="gap">공강</td>
+        </Tr>
+        <tr>
+            <td>8교시</td>
+            <td>앱인벤터모프</td>
+            <td>java프로그래밍</td>
+            <td>RIDI</td>
+            <td>데이터구조</td>
+            <td class="gap">공강</td>
+        </tr>
+        
+    </table>
+  
+</body>
+</html>
