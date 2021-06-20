@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var city =["서울","익산","광주","부산"];
+        window.onload =function(){
+            var head =document.querySelectorAll("li");
+            for(var i in city){
+                var header = head [i];
+                header.innerHTML = city[i];
+            }
+        }
+
+        function init() {
+            var p =document.getElementById("p");
+            p.addEventListener("mouseover",over);
+            p.addEventListener("mouseout",out)
+        }
+        function over() {
+            p.style.backgroundColor="red";
+        }
+        function out() {
+            p.style.backgroundColor="yellow";
+        }
+    </script>
+</head>
+<body>
+    <li>asdasd</li>
+    <li>asdasds</li>
+    <li>asdgbdfb</li>
+    <li>asdbdfb</li>
+
+    <p onmouseover="this.style.backgroundColor='blue'"
+    onmouseout="this.style.backgroundColor='red'">qwdqwdqwd</p>
+    <p id ="p" onmouseover="init()">asdasdsa</p>
+</body>
+</html>
